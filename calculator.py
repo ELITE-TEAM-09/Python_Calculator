@@ -1,5 +1,6 @@
-# calculator function
+# Calculator function
 def calculator():
+    # Function to print available operations
     def print_operations():
         print("Select operation:")
         print("1. Add")
@@ -7,13 +8,13 @@ def calculator():
         print("3. Multiply")
         print("4. Divide")
 
+    # Main loop for calculator functionality
     while True:
-
-         # Print the available operations
+        # Print the available operations
         print_operations()
 
         # Prompt the user to select an operation
-        choice = input("Enter choice(1/2/3/4): ")
+        choice = input("Enter choice (1/2/3/4): ")
 
         # Check if the user input is one of the valid choices
         if choice in ['1', '2', '3', '4']:
@@ -34,6 +35,7 @@ def calculator():
             elif choice == '3':
                 print(f"{num1} * {num2} = {num1 * num2}")
             elif choice == '4':
+                # Handle division by zero
                 result = "Error! Division by zero." if num2 == 0 else num1 / num2
                 print(f"{num1} / {num2} = {result}")
         else:
